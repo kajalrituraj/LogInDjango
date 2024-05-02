@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: #f8f9fa;
+      }
+      .signup-container {
+        max-width: 400px;
+        margin: auto;
+        margin-top: 100px;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+      }
+      .signup-header {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="signup-container">
+            <h2 class="signup-header">Sign Up</h2>
+            <form action="" method="POST">
+              {% csrf_token %}
+              <div class="form-group">
+                <label for="userName">Username</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="userName"
+                  placeholder="Enter Username"
+                  name="userName"
+                />
+              </div>
+              <div class="form-group">
+                <label for="signupEmail">Email address</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="signupEmail"
+                  placeholder="Enter email"
+                  name="email"
+                />
+              </div>
+              <div class="form-group">
+                <label for="signupPassword">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="signupPassword"
+                  placeholder="Password"
+                  name="pass1"
+                />
+              </div>
+              <div class="form-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="confirmPassword"
+                  placeholder="CnfPass"
+                  name="confirmPass"
+                />
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">
+                Sign Up
+              </button>
+              <a href="login">Already have an Account</a>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
